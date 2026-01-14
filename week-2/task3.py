@@ -1,28 +1,28 @@
-eq = input().strip()
+equation = input().strip()
 
-if eq[0] == 'x':
-    # x+5=7 or x-5=7
-    a = int(eq[2])
-    b = int(eq[4])
-    if eq[1] == '+':
-        print(b - a)
-    else:
-        print(b + a)
+if equation[0] == 'x':
 
-elif eq[2] == 'x':
-    # 3+x=7 or 3-x=7
-    a = int(eq[0])
-    b = int(eq[4])
-    if eq[1] == '+':
-        print(b - a)
+    operand = int(equation[2])
+    result = int(equation[4])
+    if equation[1] == '+':
+        print(result - operand)
     else:
-        print(a - b)
+        print(result + operand)
+
+elif equation[2] == 'x':
+
+    operand = int(equation[0])
+    result = int(equation[4])
+    if equation[1] == '+':
+        print(result - operand)
+    else:
+        print(operand - result)
 
 else:
-    # 3+5=x
-    a = int(eq[0])
-    b = int(eq[2])
-    if eq[1] == '+':
-        print(a + b)
+
+    operand1 = int(equation[0])
+    operand2 = int(equation[2])
+    if equation[1] == '+':
+        print(operand1 + operand2)
     else:
-        print(a - b)
+        print(operand1 - operand2)
